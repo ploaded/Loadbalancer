@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ploaded</title>
+<meta name="description" content="Ploaded: a company built around doing good work, simply.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2EC;--ink:#1B2A41;--muted:#56637A;--line:#C5CEC3;--card:#F9FBF7;--accent:#2447F5;--on-accent:#fff;--signal:#FFC933;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121A26;--ink:#E8EEF7;--muted:#9AA8BF;--line:#2B384B;--card:#192332;--accent:#7C93FF;--on-accent:#0E1522}}
+:root[data-theme="dark"]{--bg:#121A26;--ink:#E8EEF7;--muted:#9AA8BF;--line:#2B384B;--card:#192332;--accent:#7C93FF;--on-accent:#0E1522}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:800 1.5rem "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.02em}
+nav{display:flex;align-items:center;gap:22px}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+.btn{font:500 1rem "DM Sans",sans-serif;border-radius:10px;padding:11px 18px;background:var(--accent);color:var(--on-accent)!important;text-decoration:none;display:inline-block}
+.hero{padding:72px 0 88px}
+.hero h1{font-size:clamp(4rem,19vw,11rem);font-weight:800;letter-spacing:-.05em;line-height:.9}
+.hero h1 span{background:linear-gradient(transparent 62%,var(--signal) 62% 92%,transparent 92%)}
+.hero p{font-size:clamp(1.15rem,2.4vw,1.5rem);max-width:28em;color:var(--muted);margin:28px 0 32px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-.03em;margin-bottom:28px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.two p{margin:0 0 1em;color:var(--muted)}
+.list{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.list h3{font-size:1.4rem;margin-bottom:8px}
+.list p{margin:0;color:var(--muted)}
+.contact{text-align:center}
+.contact p{color:var(--muted);margin:0 0 24px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.95rem}
+@media (max-width:760px){.two,.list{grid-template-columns:1fr;gap:28px}nav a:not(.btn){display:none}.hero{padding:40px 0 56px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">Ploaded</a>
+    <nav><a href="#about">About</a><a href="#services">Services</a><a class="btn" href="#contact">Contact us</a></nav>
+  </header>
+  <main id="top">
+    <div class="hero">
+      <h1><span>Ploaded</span></h1>
+      <p>We help people and businesses get real work done, from first idea to finished result.</p>
+      <a class="btn" href="#contact">Start a project</a>
+    </div>
+
+    <section id="about">
+      <h2>About Ploaded</h2>
+      <div class="two">
+        <p>Ploaded is a company built on a simple idea: good work should be clear, quick and easy to rely on.</p>
+        <p>We keep our team small and our process open, so you always know what is happening and what comes next.</p>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>What we do</h2>
+      <div class="list">
+        <div><h3>Plan</h3><p>We turn your goals into a clear scope, timeline and price before any work starts.</p></div>
+        <div><h3>Build</h3><p>We deliver the work in stages, with regular updates and room for your feedback.</p></div>
+        <div><h3>Support</h3><p>After launch we stay available to fix issues and help you improve.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Talk to us</h2>
+      <p>Tell us what you need and we will reply within one working day.</p>
+      <a class="btn" href="mailto:hello@loaded.work.gd">Email hello@loaded.work.gd</a>
+    </section>
+  </main>
+  <footer><span>&copy; <span id="yr">2026</span> Ploaded</span><a href="https://loaded.work.gd">loaded.work.gd</a></footer>
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
